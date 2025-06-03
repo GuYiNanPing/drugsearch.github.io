@@ -62,7 +62,7 @@
                 class="w-full py-3 px-5 rounded-lg border border-gray-300 shadow-sm search-focus transition-all duration-300 text-lg mb-4">
             <button id="password-button"
                 class="w-full py-3 px-5 bg-primary text-white rounded-lg hover:bg-accent transition-colors">Submit</button>
-            <p class="text-gray-500 text-sm mt-4">Please contact the corresponding author for the password.</p>
+            <p class="text-gray-500 text-sm mt-4">Please contact the author for the password, liuchenning1992@163.com</p>
         </div>
     </div>
 
@@ -94,7 +94,6 @@
                     <thead>
                         <tr class="bg-gray-100 text-left">
                             <th class="px-6 py-4 text-gray-700 font-bold text-lg">Generic Name</th>
-                            <th class="px-6 py-4 text-gray-700 font-bold text-lg">Manufacturer</th>
                             <th class="px-6 py-4 text-gray-700 font-bold text-lg">Drug Origin</th>
                             <th class="px-6 py-4 text-gray-700 font-bold text-lg">Target</th>
                         </tr>
@@ -136,44 +135,44 @@
 
         // Drug data
         const drugs = [
-            { genericName: "Gefitinib", manufacturer: "AstraZeneca PLC", origin: "Imported", target: "EGFR ex19d and L858R" },
-            { genericName: "Erlotinib", manufacturer: "Roche Registration Ltd.", origin: "Imported", target: "EGFR ex19d and L858R" },
-            { genericName: "Icotinib hydrochloride", manufacturer: "贝达药业股份有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Afatinib", manufacturer: "Boehringer Ingelheim International GmbH", origin: "Imported", target: "EGFR ex19d and L858R" },
-            { genericName: "Osimertinib", manufacturer: "AstraZeneca AB", origin: "Imported", target: "EGFR ex19d and L858R" },
-            { genericName: "Dacomitinib", manufacturer: "Pfizer Europe MA EEIG", origin: "Imported", target: "EGFR ex19d and L858R" },
-            { genericName: "Almonertinib", manufacturer: "江苏豪森药业集团有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Furmonertinib mesylate", manufacturer: "上海艾力斯医药科技股份有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Befotertinib Mesylate", manufacturer: "贝达药业股份有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Rezivertinib", manufacturer: "上海倍而达药业有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Rilertinib Mesylate", manufacturer: "南京圣和药业股份有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Zorifertinib", manufacturer: "江苏晨泰医药科技有限公司", origin: "Domestic", target: "EGFR ex19d and L858R" },
-            { genericName: "Sunvozertinib", manufacturer: "迪哲（江苏）医药股份有限公司", origin: "Domestic", target: "EGFR ex20 ins" },
-            { genericName: "Crizotinib", manufacturer: "Pfizer Europe MA EEIG", origin: "Imported", target: "ALK" },
-            { genericName: "Crizotinib ", manufacturer: "Pfizer Europe MA EEIG", origin: "Imported", target: "ROS1" },
-            { genericName: "Ceritinib", manufacturer: "Novartis Pharma Stein AG", origin: "Imported", target: "ALK" },
-            { genericName: "Alectinib", manufacturer: "许可证持有：Roche Registration GmbH<br>生产企业：Excella GmbH & Co. KG", origin: "Imported", target: "ALK" },
-            { genericName: "Ensartinib", manufacturer: "贝达药业股份有限公司", origin: "Domestic", target: "ALK" },
-            { genericName: "Brigatinib", manufacturer: "Takeda Pharma A/S", origin: "Imported", target: "ALK" },
-            { genericName: "Lorlatinib", manufacturer: "Pfizer Europe MA EEIG", origin: "Imported", target: "ALK" },
-            { genericName: "Iruplinalkib", manufacturer: "齐鲁制药有限公司", origin: "Domestic", target: "ALK" },
-            { genericName: "Envonalkib", manufacturer: "正大天晴药业集团股份有限公司", origin: "Domestic", target: "ALK" },
-            { genericName: "Dabrafenib mesylate plus Trametinib Dimethyl Sulfoxide", manufacturer: "许可证持有: Novartis Europharm Limited <br>生产企业：GlaxoSmithKline Manufacturing S.p.A", origin: "Imported", target: "BRAF V600E" },
-            { genericName: "Fulzerasib", manufacturer: "信达生物科技有限公司", origin: "Domestic", target: "KRAS G12C" },
-            { genericName: "Garsorasib", manufacturer: "上海正大天晴医药科技开发有限公司", origin: "Domestic", target: "KRAS G12C" },
-            { genericName: "Entrectinib", manufacturer: "许可证持有: Roche Pharma (Schweiz) AG<br>生产企业：Mayne Pharma Inc.", origin: "Imported", target: "ROS1" },
-            { genericName: "Unecritinib", manufacturer: "正大天晴药业集团股份有限公司", origin: "Domestic", target: "ROS1" },
-            { genericName: "Repotrectinib", manufacturer: "Bristol Myers Squibb", origin: "Imported", target: "ROS1" },
-            { genericName: "Taletrectinib", manufacturer: "葆元生物医药科技（杭州）有限公司", origin: "Domestic", target: "ROS1" },
-            { genericName: "Pralsetinib", manufacturer: "许可证持有: Blueprint Medicines Corporation <br>生产企业：Catalent CTS (Kansas City), LLC", origin: "Imported", target: "RET" },
-            { genericName: "Selpercatinib", manufacturer: "Eli Lilly Nederland B.V.（信达/礼来）", origin: "Imported", target: "RET" },
-            { genericName: "Savolitinib", manufacturer: "许可证持有: 和记黄埔医药（上海）有限公司 <br>生产企业：上海合全医药有限公司", origin: "Domestic", target: "MET ex14" },
-            { genericName: "Glumetinib", manufacturer: "许可证持有：上海海和药物研究开发股份有限公司<br>生产企业：江苏宣泰药业有限公司", origin: "Domestic", target: "MET ex14" },
-            { genericName: "Vebreltinib", manufacturer: "上市许可持有人 ：北京浦润奥生物科技有限责任公司<br>生产企业：凯莱英生命科学技术（天津）有限公司", origin: "Domestic", target: "MET ex14" },
-            { genericName: "Tepotinib hydrochloride hydrate", manufacturer: "上市许可持有人：(Schweiz) A<br>生产企业：Merck Healthcare KGaA", origin: "Imported", target: "MET ex14" },
-            { genericName: "Capmatinib Hydrochloride", manufacturer: "Novartis Pharma Schweiz AG", origin: "Imported", target: "MET ex14" },
-            { genericName: "Trastuzumab Deruxtecan", manufacturer: "Daiichi Sankyo Europe GmbH", origin: "Imported", target: "HER2" },
-            { genericName: "Mobocertinib succinate", manufacturer: "Takeda Pharmaceuticals U.S.A., Inc.", origin: "Imported", target: "EGFR ex20 ins" }
+            { genericName: "Gefitinib", origin: "Imported", target: "EGFR ex19d and L858R" },
+            { genericName: "Erlotinib", origin: "Imported", target: "EGFR ex19d and L858R" },
+            { genericName: "Icotinib hydrochloride", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Afatinib", origin: "Imported", target: "EGFR ex19d and L858R" },
+            { genericName: "Osimertinib", origin: "Imported", target: "EGFR ex19d and L858R" },
+            { genericName: "Dacomitinib", origin: "Imported", target: "EGFR ex19d and L858R" },
+            { genericName: "Almonertinib", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Furmonertinib mesylate", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Befotertinib Mesylate", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Rezivertinib", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Rilertinib Mesylate", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Zorifertinib", origin: "Domestic", target: "EGFR ex19d and L858R" },
+            { genericName: "Sunvozertinib", origin: "Domestic", target: "EGFR ex20 ins" },
+            { genericName: "Crizotinib", origin: "Imported", target: "ALK" },
+            { genericName: "Crizotinib ", origin: "Imported", target: "ROS1" },
+            { genericName: "Ceritinib", origin: "Imported", target: "ALK" },
+            { genericName: "Alectinib", origin: "Imported", target: "ALK" },
+            { genericName: "Ensartinib", origin: "Domestic", target: "ALK" },
+            { genericName: "Brigatinib", origin: "Imported", target: "ALK" },
+            { genericName: "Lorlatinib", origin: "Imported", target: "ALK" },
+            { genericName: "Iruplinalkib", origin: "Domestic", target: "ALK" },
+            { genericName: "Envonalkib", origin: "Domestic", target: "ALK" },
+            { genericName: "Dabrafenib mesylate plus Trametinib Dimethyl Sulfoxide", origin: "Imported", target: "BRAF V600E" },
+            { genericName: "Fulzerasib", origin: "Domestic", target: "KRAS G12C" },
+            { genericName: "Garsorasib", origin: "Domestic", target: "KRAS G12C" },
+            { genericName: "Entrectinib", origin: "Imported", target: "ROS1" },
+            { genericName: "Unecritinib", origin: "Domestic", target: "ROS1" },
+            { genericName: "Repotrectinib", origin: "Imported", target: "ROS1" },
+            { genericName: "Taletrectinib", origin: "Domestic", target: "ROS1" },
+            { genericName: "Pralsetinib", origin: "Imported", target: "RET" },
+            { genericName: "Selpercatinib", origin: "Imported", target: "RET" },
+            { genericName: "Savolitinib", origin: "Domestic", target: "MET ex14" },
+            { genericName: "Glumetinib", origin: "Domestic", target: "MET ex14" },
+            { genericName: "Vebreltinib", origin: "Domestic", target: "MET ex14" },
+            { genericName: "Tepotinib hydrochloride hydrate", origin: "Imported", target: "MET ex14" },
+            { genericName: "Capmatinib Hydrochloride", origin: "Imported", target: "MET ex14" },
+            { genericName: "Trastuzumab Deruxtecan", origin: "Imported", target: "HER2" },
+            { genericName: "Mobocertinib succinate", origin: "Imported", target: "EGFR ex20 ins" }
         ];
 
         // DOM elements
@@ -257,11 +256,6 @@
                 link.textContent = drug.genericName;
                 nameCell.appendChild(link);
 
-                // Manufacturer cell
-                const manufacturerCell = document.createElement('td');
-                manufacturerCell.className = 'px-6 py-4';
-                manufacturerCell.innerHTML = drug.manufacturer;
-
                 // Drug Origin cell
                 const originCell = document.createElement('td');
                 originCell.className = 'px-6 py-4';
@@ -280,7 +274,6 @@
 
                 // Add cells to row
                 row.appendChild(nameCell);
-                row.appendChild(manufacturerCell);
                 row.appendChild(originCell);
                 row.appendChild(targetCell);
 
